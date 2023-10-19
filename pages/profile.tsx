@@ -1,4 +1,4 @@
-import { useUser } from "@auth0/nextjs-auth0/client";
+import { useAuth0 } from '@auth0/auth0-react';
 import { NextPage } from "next";
 import Image from "next/image";
 import React from "react";
@@ -7,7 +7,7 @@ import { PageLayout } from "../components/page-layout";
 
 const Profile: NextPage = () => {
   const defaultPicture = "https://cdn.auth0.com/blog/hello-auth0/auth0-user.png";
-  const { user } = useUser();
+  const { user } = useAuth0();
 
   if (!user) {
     return null;

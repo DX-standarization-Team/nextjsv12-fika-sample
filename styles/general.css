@@ -19,7 +19,7 @@ body {
 }
 
 body {
-  background-color: var(--black);
+  background-color: var(--white);
 
   color: var(--white);
   font-family: var(--font-primary);
@@ -102,7 +102,7 @@ blockquote {
   font-style: italic;
 }
 
-body,
+body
 button,
 input,
 select,

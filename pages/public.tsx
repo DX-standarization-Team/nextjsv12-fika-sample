@@ -2,16 +2,9 @@ import { NextPage } from "next";
 import React from "react";
 import { CodeSnippet } from "../components/code-snippet";
 import { PageLayout } from "../components/page-layout";
-import { useMessage } from "../services/use-message";
 
 const Public: NextPage = () => {
-  const { message } = useMessage({
-    url: `/api/messages/public`,
-    method: "GET",
-    headers: {
-      "content-type": "application/json",
-    },
-  });
+  const message = "This is a public message."
 
   return (
     <PageLayout>

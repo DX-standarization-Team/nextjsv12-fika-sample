@@ -2,16 +2,10 @@ import { NextPage } from "next";
 import React from "react";
 import { CodeSnippet } from "../components/code-snippet";
 import { PageLayout } from "../components/page-layout";
-import { useMessage } from "../services/use-message";
+import { withAuthenticationRequired } from '@auth0/auth0-react';
 
 const Admin: NextPage = () => {
-  const { message } = useMessage({
-    url: `/api/messages/admin`,
-    method: "GET",
-    headers: {
-      "content-type": "application/json",
-    },
-  });
+  const message = "This is an admin message."
 
   return (
     <PageLayout>
@@ -39,4 +33,4 @@ const Admin: NextPage = () => {
   );
 };
 
-export default Admin;
+export default withAuthenticationRequired(Admin);

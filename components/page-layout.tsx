@@ -1,4 +1,4 @@
-import { useUser } from "@auth0/nextjs-auth0/client";
+import { useAuth0 } from '@auth0/auth0-react';
 import React from "react";
 import { NavBar } from "./navigation/desktop/nav-bar";
 import { MobileNavBar } from "./navigation/mobile/mobile-nav-bar";
@@ -10,7 +10,7 @@ interface PageLayoutProps {
 }
 
 export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
-  const { isLoading } = useUser();
+  const { isLoading } = useAuth0();
 
   if (isLoading) {
     return (

@@ -2,16 +2,10 @@ import { NextPage } from "next";
 import React from "react";
 import { CodeSnippet } from "../components/code-snippet";
 import { PageLayout } from "../components/page-layout";
-import { useMessage } from "../services/use-message";
+import { withAuthenticationRequired } from '@auth0/auth0-react';
 
 const Protected: NextPage = () => {
-  const { message } = useMessage({
-    url: `/api/messages/protected`,
-    method: "GET",
-    headers: {
-      "content-type": "application/json",
-    },
-  });
+  const message = "This is a protected message."
 
   return (
     <PageLayout>
@@ -35,4 +29,4 @@ const Protected: NextPage = () => {
   );
 };
 
-export default Protected;
+export default withAuthenticationRequired(Protected);

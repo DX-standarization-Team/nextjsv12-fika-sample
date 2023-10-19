@@ -1,17 +1,17 @@
-import { useUser } from "@auth0/nextjs-auth0/client";
+import { useAuth0 } from '@auth0/auth0-react';
 import React from "react";
 import { LoginButton } from "../../buttons/login-button";
 import { LogoutButton } from "../../buttons/logout-button";
 import { SignupButton } from "../../buttons/signup-button";
 
 export const NavBarButtons: React.FC = () => {
-  const { user } = useUser();
+  const { user } = useAuth0();
 
   return (
     <div className="nav-bar__buttons">
       {!user && (
         <>
-          <SignupButton />
+          <SignupButton/>
           <LoginButton />
         </>
       )}
