@@ -1,5 +1,9 @@
 # Next.js/TypeScript: Basic User Authentication Code Sample
 
+以下参考に、auth0-reactで作り直し。
+https://developer.auth0.com/resources/code-samples/web-app/nextjs
+https://developer.auth0.com/resources/code-samples/web-app/nextjs/basic-authentication/typescript-pages-router
+
 This TypeScript code sample demonstrates **how to implement user authentication** in Next.js web applications using Auth0.
 
 This code sample is part of the ["Auth0 Developer Resources"](https://developer.auth0.com/resources), a place where you can explore the authentication and authorization features of the Auth0 Identity Platform.

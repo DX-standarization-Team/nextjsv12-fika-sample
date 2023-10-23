@@ -4,7 +4,7 @@
 
   font-family: var(--font-primary);
   font-weight: 600;
-  color: var(--white);
+  color: var(--black);
 
   cursor: pointer;
   user-select: none;

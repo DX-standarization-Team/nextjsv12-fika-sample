@@ -2,9 +2,16 @@ import { NextPage } from "next";
 import React from "react";
 import { CodeSnippet } from "../components/code-snippet";
 import { PageLayout } from "../components/page-layout";
-import { withAuthenticationRequired } from '@auth0/auth0-react';
+import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
 
 const Protected: NextPage = () => {
+  const {user, getAccessTokenSilently} = useAuth0();
+  console.log("user####")
+  console.log(user)
+  const accessT = getAccessTokenSilently();
+  console.log("accessT####")
+  console.log(accessT)
+
   const message = "This is a protected message."
 
   return (
